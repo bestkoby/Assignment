@@ -85,3 +85,43 @@ select City, CompanyName, ContactName, 'Supplier' as Type
 from Suppliers
  
 -- 14
+SELECT distinct s.city
+from Customers c, Suppliers s 
+where s.city = c.City
+  
+-- 15
+SELECT distinct s.city
+from Customers c, Suppliers s 
+where s.city = c.City
+
+-- 16
+SELECT p.ProductName, dt.totalorder
+from Products p join (
+   SELECT od.ProductID, sum(od.quantity) as totalorder
+   from [Order Details] od join Orders o 
+   on od.OrderID = o.OrderID
+   group by od.ProductID
+) dt
+on p.ProductID = dt.ProductID
+
+-- 17
+SELECT City
+from Customers
+group by City
+having COUNT(*) > 2
+
+
+-- 18
+SELECT c.City 
+from Customers c join Orders o  on c.CustomerID = o.CustomerID join [Order Details] od on od.OrderID = o.OrderID
+group by c.City 
+having COUNT(DISTINCT od.ProductID) >= 2
+
+ 
+-- 19
+ 
+-- 20
+
+-- 21
+SELECT distinct *
+from Customers
