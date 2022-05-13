@@ -83,16 +83,16 @@ from Customers
 union 
 select City, CompanyName, ContactName, 'Supplier' as Type
 from Suppliers
- 
+  
 -- 14
 SELECT distinct s.city
 from Customers c, Suppliers s 
 where s.city = c.City
   
--- 15
-SELECT distinct s.city
-from Customers c, Suppliers s 
-where s.city = c.City
+-- 15b
+SELECT *
+from Customers c left join Employees e on c.city = e.city
+where e.EmployeeID is null
 
 -- 16
 SELECT p.ProductName, dt.totalorder
@@ -104,11 +104,29 @@ from Products p join (
 ) dt
 on p.ProductID = dt.ProductID
 
--- 17
+-- 17a
+SELECT City
+from Customers
+except (
 SELECT City
 from Customers
 group by City
-having COUNT(*) > 2
+having COUNT(*)= 0
+union 
+SELECT City
+from Customers
+group by City
+having COUNT(*)= 1
+)
+ 
+-- 17b
+SELECT City
+from  (
+	SELECT City, COUNT(*) as numofcustomers 
+	from Customers
+	group by City
+) t
+where numofcustomers >= 2 
 
 
 -- 18
@@ -118,9 +136,40 @@ group by c.City
 having COUNT(DISTINCT od.ProductID) >= 2
 
  
--- 19
- 
+-- 19 
+-- Assume most orders are most popular
+SELECT top 5 od.ProductID 
+		from Orders o join [Order Details] od on od.OrderID = o.OrderID
+		group by od.ProductID
+		order by COUNT(*)
+	SELECT c.City, t1.ProductID,SUM(t1.quantitybyCustomer) as numberofproductbuy    
+	from Customers c join  (
+		SELECT o.CustomerID, od.ProductID, SUM(od.quantity) as quantitybyCustomer
+		from Orders o join [Order Details] od on od.OrderID = o.OrderID
+		group by o.CustomerID, od.ProductID
+	) t1 on c.CustomerID = t1.CustomerID  
+	group by c.City, t1.ProductID  
+	order by SUM(t1.quantitybyCustomer) desc
+
 -- 20
+select a.City 
+from (
+	SELECT top 1 c.City 
+	from Customers c join Orders o  on c.CustomerID = o.CustomerID
+	group by c.City
+	order by COUNT(*) desc
+) a,
+(
+	SELECT top 1 c.City 
+	from Customers c join  (
+		SELECT o.CustomerID, SUM(od.quantity) as quantitybyCustomer
+		from Orders o join [Order Details] od on od.OrderID = o.OrderID
+		group by o.CustomerID
+	) t1 on c.CustomerID = t1.CustomerID  
+	group by c.City  
+	order by SUM(t1.quantitybyCustomer) desc
+) b
+where a.City =b.City 
 
 -- 21
 SELECT distinct *
