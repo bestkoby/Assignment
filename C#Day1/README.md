@@ -75,11 +75,14 @@ If a string can change (example: lots of logic and operations in the constructio
 The Array class is the base class for all the arrays in C#. It is defined in the System namespace.  
 **3. How do you sort an array in C#?**  
 Array.Sort() method 
+
 **4. What property of an array object can be used to get the total number of elements in an array?** 
 Array.Length Property
+
 **5. Can you store multiple data types in System.Array?**  
 No, we cannot store multiple datatype in an Array, we can store similar datatype only in an Array.
-**6. What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?**  
+
+**6. What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?**   
 The Clone() method returns a new array (a shallow copy) object containing all the elements in the original array. The CopyTo() method copies the elements into another existing array. Both perform a shallow copy. A shallow copy means the contents (each array element) contains references to the same object as the elements in the original array
 1- CopyTo require to have a destination array when Clone return a new array.
 2- CopyTo let you specify an index (if required) to the destination array.

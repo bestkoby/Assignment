@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\02UnderstandingTypes\\02UnderstandingTypes\\Day1.csproj": {}
+    "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\Day1\\Day1\\Day1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\02UnderstandingTypes\\02UnderstandingTypes\\Day1.csproj": {
+    "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\Day1\\Day1\\Day1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\02UnderstandingTypes\\02UnderstandingTypes\\Day1.csproj",
+        "projectUniqueName": "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\Day1\\Day1\\Day1.csproj",
         "projectName": "Day1",
-        "projectPath": "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\02UnderstandingTypes\\02UnderstandingTypes\\Day1.csproj",
+        "projectPath": "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\Day1\\Day1\\Day1.csproj",
         "packagesPath": "C:\\Users\\bestk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\02UnderstandingTypes\\02UnderstandingTypes\\obj\\",
+        "outputPath": "C:\\Users\\bestk\\Financial-programming\\Assignment\\C#Day1\\Day1\\Day1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bestk\\AppData\\Roaming\\NuGet\\NuGet.Config",
