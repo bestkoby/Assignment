@@ -37,24 +37,33 @@ The garbage collector manages the allocation and release of memory for an applic
  
 ### Controlling Flow and Converting Types
 
-**1. What happens when you divide an int variable by 0?**  
+**1. What happens when you divide an int variable by 0?**      
 error code CS0020 division by constant 0
-**2. What happens when you divide a double variable by 0?**  
+
+**2. What happens when you divide a double variable by 0?**     
 infinte
-**3. What happens when you overflow an int variable, that is, set it to a value beyond its range?**  
+
+
+**3. What happens when you overflow an int variable, that is, set it to a value beyond its range?**    
 error code CS0266 Cannot implicitly convert type 'long' to 'int'. An explicit conversion exists (are you missing a cast?)
-**4. What is the difference between x = y++; and x = ++y;?**  
-x = y++ let y =y+1 and then assign y to x. x = ++y assign y to x and then let y =y+1.
-**5. What is the difference between break, continue, and return when used inside a loop statement?**  
-break is used to exit from a loop or a switch-case. continue is used to move the control to the next iteration of the loop. return is used to return a value from a function.
-**6. What are the three parts of a for statement and which of them are required?**  
-initialization, condition, update loop variable 
-**7. What is the difference between the = and == operators?**  
+
+**4. What is the difference between x = y++; and x = ++y;?**   
+x = y++ let y =y+1 and then assign y to x. x = ++y assign y to x and then let y =y+1.  
+
+**5. What is the difference between break, continue, and return when used inside a loop statement?**    
+break is used to exit from a loop or a switch-case. continue is used to move the control to the next iteration of the loop. return is used to return a value from a function.  
+
+**6. What are the three parts of a for statement and which of them are required?**    
+initialization, condition, update loop variable   
+
+**7. What is the difference between the = and == operators?**     
 = assign operator,   ==  is the comparison operator 
-**8. Does the following statement compile? for ( ; true; ) ;**  
+
+**8. Does the following statement compile? for ( ; true; ) ;**    
 compile, causing infinte loop
-**9. What does the underscore _ represent in a switch expression?**  
+**9. What does the underscore _ represent in a switch expression?**    
 The underscore (_) character replaces the default keyword to signify that it should match anything if reached.
+
 **10. What interface must an object implement to be enumerated over by using the foreach statement?**  
 terators are called enumerators, and they come from the IEnumerator interface
 
