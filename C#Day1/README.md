@@ -61,6 +61,7 @@ initialization, condition, update loop variable
 
 **8. Does the following statement compile? for ( ; true; ) ;**    
 compile, causing infinte loop
+
 **9. What does the underscore _ represent in a switch expression?**    
 The underscore (_) character replaces the default keyword to signify that it should match anything if reached.
 
@@ -71,8 +72,10 @@ terators are called enumerators, and they come from the IEnumerator interface
 **1. When to use String vs. StringBuilder in C# ?**  
 If a string is going to remain constant throughout the program, then use String class object because a String object is immutable.
 If a string can change (example: lots of logic and operations in the construction of the string) then using a StringBuilder is the best option.
+
 **2. What is the base class for all arrays in C#?**  
 The Array class is the base class for all the arrays in C#. It is defined in the System namespace.  
+
 **3. How do you sort an array in C#?**  
 Array.Sort() method 
 

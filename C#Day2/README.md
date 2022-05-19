@@ -41,27 +41,39 @@ An abstract class permits you to make functionality that subclasses can implemen
 
 **11. What accessibility level are members of an interface?**  
 Interface members implicitly have public declared accessibility. No access modifiers are allowed on interface member declarations.
+
 **12. True/False. Polymorphism allows derived classes to provide different implementations of the same method.**  
 True
+
 **13. True/False. The override keyword is used to indicate that a method in a derived class is providing its own implementation of a method.**  
 True
+
 **14. True/False. The new keyword is used to indicate that a method in a derived class is providing its own implementation of a method.**  
 False
+
 **15. True/False. Abstract methods can be used in a normal (non-abstract) class.**  
 True
+
 **16. True/False. Normal (non-abstract) methods can be used in an abstract class.**  
 False
+
 **17. True/False. Derived classes can override methods that were virtual in the base class.**  
 True
+
 **18. True/False. Derived classes can override methods that were abstract in the base class.**  
 True
+
 **19. True/False. In a derived class, you can override a method that was neither virtual non abstract in  base class.**  
 False
+
 **20. True/False. A class that implements an interface does not have to provide an implementation for all of the members of the interface.**  
 True
+
 **21. True/False. A class that implements an interface is allowed to have other members that aren’t defined in the interface.**  
 True
+
 **22. True/False. A class can have more than one base class.**  
 False
+
 **23. True/False. A class can implement more than one interface.**  
 True
